@@ -1,4 +1,4 @@
-# 🌿 Sistem POC (Pupuk Organik Cair)
+# 🌿 Bioluxe (Pupuk Organik Cair)
 
 Sistem manajemen operasional produksi **Pupuk Organik Cair (POC)** berbasis web. Dibangun dengan Laravel 13, Tailwind CSS, dan Alpine.js. Mengelola siklus lengkap dari pembelian bahan baku (sampah organik) hingga penjualan produk POC.
 
@@ -42,8 +42,8 @@ Pastikan perangkat Anda sudah memiliki:
 ### 1. Clone Repository
 
 ```bash
-git clone https://github.com/your-username/sistem-poc.git
-cd sistem-poc
+git clone https://github.com/your-username/bioluxe.git
+cd bioluxe
 ```
 
 ### 2. Install Dependensi PHP
@@ -67,7 +67,7 @@ Edit file `.env` dan sesuaikan bagian database:
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
-DB_DATABASE=sistem_poc
+DB_DATABASE=bioluxe
 DB_USERNAME=root
 DB_PASSWORD=
 
@@ -75,9 +75,9 @@ DB_PASSWORD=
 # DB_CONNECTION=sqlite
 ```
 
-> ⚠️ Jika menggunakan MySQL, buat database `sistem_poc` terlebih dahulu melalui phpMyAdmin atau terminal:
+> ⚠️ Jika menggunakan MySQL, buat database `bioluxe` terlebih dahulu melalui phpMyAdmin atau terminal:
 > ```sql
-> CREATE DATABASE sistem_poc;
+> CREATE DATABASE bioluxe;
 > ```
 
 ### 4. Generate Application Key
@@ -141,7 +141,7 @@ Setelah menjalankan seeder, Anda bisa login dengan akun berikut:
 
 | Role | Email | Password |
 |---|---|---|
-| Admin | `admin@sistem-poc.test` | `password` |
+| Admin | `admin@bioluxe.test` | `password` |
 
 > Untuk menambahkan akun Staff Produksi atau Kasir, login sebagai Admin lalu buka menu **Manajemen User**.
 
@@ -150,7 +150,7 @@ Setelah menjalankan seeder, Anda bisa login dengan akun berikut:
 Agar fitur notifikasi peringatan masa panen berjalan otomatis, tambahkan cron job berikut di server:
 
 ```bash
-* * * * * cd /path-to/sistem-poc && php artisan schedule:run >> /dev/null 2>&1
+* * * * * cd /path-to/bioluxe && php artisan schedule:run >> /dev/null 2>&1
 ```
 
 Untuk pengembangan lokal, jalankan secara manual:
@@ -162,7 +162,7 @@ php artisan schedule:work
 ## 📂 Struktur Direktori Utama
 
 ```
-sistem-poc/
+bioluxe/
 ├── app/
 │   ├── Http/Controllers/     # Controller untuk setiap modul
 │   ├── Models/               # Eloquent Model
